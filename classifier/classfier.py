@@ -11,8 +11,6 @@ class Classifier:
             return Features.lemmatization_extract_features(text=text)
         if feature_type == 'recognize_names':
             return Features.recognize_names_features(text=text)
-        if feature_type == 'lemmatization_and_recognize_names':
-            return Features.lemmatization_and_recognize_names_features(text=text)
         else:
             return Features.basic_extract_features(text=text)
 
