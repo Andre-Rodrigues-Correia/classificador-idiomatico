@@ -8,3 +8,4 @@ requests
 scikit-learn
 seaborn
 spacy
+gunicorn==19.7.1
