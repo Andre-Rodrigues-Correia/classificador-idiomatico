@@ -3,7 +3,7 @@ from nltk.tokenize import word_tokenize
 from nltk.classify.util import accuracy
 import spacy
 import re
-nlp = spacy.load("pt_core_news_sm")
+
 
 
 class Features:
@@ -17,7 +17,7 @@ class Features:
 
     @classmethod
     def lemmatization_extract_features(cls, text):
-        doc = nlp(text.lower())
+        doc = text.lower()
         legitimatized_tokens = [token.lemma_ for token in doc]
         words = [token for token in legitimatized_tokens if token.isalpha()]
         feature = {word: True for word in words}
